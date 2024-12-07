@@ -1,12 +1,12 @@
 const makeCard = async (username) => {
   let htmlElement;
+  const USERNAME = "dsc-nitr";
+  const PASSWORD = "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";
   await $.ajax({
     type: "GET",
     url: "https://api.github.com/users/" + username,
     headers: {
-      Authorization:
-        "Basic " +
-        btoa("dsc-nitr" + ":" + "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"),
+      Authorization: "Basic " + btoa(USERNAME + ":" + PASSWORD),
     },
     success: (userData) => {
       htmlElement =
